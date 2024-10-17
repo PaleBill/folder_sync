@@ -39,7 +39,7 @@ def copy(path_src, path_des):
         log(e)
 
 
-def remove_extra_files_and_folders(path_src, path_des):
+def remove_files_and_folders(path_src, path_des):
     """
     Removes files and directories in the destination that do not exist in the source.
 
@@ -68,7 +68,7 @@ def remove_extra_files_and_folders(path_src, path_des):
             log(f"Removed folder: {folderName}")
 
 
-def each_file(path_src, path_des):
+def copy_files_and_folders(path_src, path_des):
     """
     Recursively copies files from the source directory to the destination directory,
     ensuring that the directory structure is maintained.
@@ -125,6 +125,6 @@ if __name__ == "__main__":
 
     # Run the script periodically with the specified interval
     while True:
-        each_file(path_src, path_des)
-        remove_extra_files_and_folders(path_src, path_des)
+        copy_files_and_folders(path_src, path_des)
+        remove_files_and_folders(path_src, path_des)
         time.sleep(interval)
