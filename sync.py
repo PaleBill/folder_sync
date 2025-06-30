@@ -3,6 +3,7 @@ import os
 import shutil
 from datetime import datetime
 import time
+import csv
 
 def log(string):
     """
@@ -20,7 +21,7 @@ def log(string):
 
     with open(LOG_FILE_PATH, 'a') as log_file:
         log_file.write(log_message + '\n')
-
+    print("artem daun")
 
 def copy(path_src, path_des):
     """
@@ -128,3 +129,4 @@ if __name__ == "__main__":
         copy_files_and_folders(path_src, path_des)
         remove_files_and_folders(path_src, path_des)
         time.sleep(interval)
+    return 1
